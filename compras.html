@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+    </header>
+
+    <main>
+        <section id="cart-items">
+            <h2>Productos en tu carrito</h2>
+            <ul>
+                <!-- Aquí se listarán los productos añadidos al carrito -->
+                <li>Producto 1 - Precio: S/.3,200</li>
+                <li>Producto 2 - Precio: S/.1,500</li>
+                <!-- Añadir más productos según sea necesario -->
+            </ul>
+        </section>
+        <a href="index.html">Volver a la página principal</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Computer Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartList = document.getElementById('cart-list');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            cart.forEach(product => {
+                const li = document.createElement('li');
+                li.textContent = `${product.name} - Precio: S/.${product.price}`;
+                cartList.appendChild(li);
+            });
+        });
+    </script>
+    
+</body>
+</html>
