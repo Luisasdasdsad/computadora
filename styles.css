@@ -103,7 +103,43 @@ footer {
     width: 100%;
     height: 4%;
 }
+#cart-items {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
 
+#cart-items h2 {
+    margin-top: 0;
+}
+
+#cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#cart-list li:last-child {
+    border-bottom: none;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 /* Media Queries for Responsiveness */
 
 @media (max-width: 768px) {
